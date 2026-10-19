@@ -8,7 +8,7 @@ spec:
   - group: '*'
     kind: '*'
   destinations:
-  - namespace: 'infrastructure'
+  - namespace: infrastructure
     server: https://kubernetes.default.svc
   orphanedResources:
     warn: false
