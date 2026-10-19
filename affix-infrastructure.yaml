@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: affix-infra
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: 'infrastructure'
+    server: https://kubernetes.default.svc
+  orphanedResources:
+    warn: false
+  sourceRepos:
+  - 'https://github.com/georgievlb/affix-infra.git'
